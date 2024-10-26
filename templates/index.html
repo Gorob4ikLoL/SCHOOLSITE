@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Головна</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f4f7fa;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #5c6bc0;
+            padding: 10px 20px;
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: white;
+            margin-right: 15px;
+            padding: 10px 20px;
+            border-radius: 5px;
+            background-color: #3f51b5;
+            transition: background-color 0.3s;
+        }
+
+        .navbar a:hover {
+            background-color: #303f9f;
+        }
+
+        h1 {
+            color: #5c6bc0;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: row;
+            max-width: 1200px;
+            margin: 30px auto;
+            width: 100%;
+        }
+
+        .sidebar {
+            width: 25%;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-right: 20px;
+            align-self: flex-start;
+        }
+
+        .sidebar h2 {
+            color: #5c6bc0;
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .sidebar ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .sidebar ul li {
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+
+        .sidebar ul li:hover {
+            color: #5c6bc0;
+            cursor: pointer;
+        }
+
+        .main-content {
+            width: 75%;
+        }
+
+        .company-info {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .company-info h2 {
+            color: #5c6bc0;
+            margin-bottom: 15px;
+        }
+
+        .company-info p {
+            color: #555;
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        .teacher-container {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 30px;
+        }
+
+        .teacher-block {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 250px;
+        }
+
+        .teacher-block img {
+            border-radius: 50%;
+            margin-bottom: 15px;
+        }
+
+        .teacher-block h3 {
+            margin: 10px 0 5px 0;
+            color: #5c6bc0;
+        }
+
+        .teacher-block p {
+            color: #555;
+        }
+
+        /* Contact Us секція */
+        .contact-section {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+
+        .contact-section h2 {
+            color: #5c6bc0;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .contact-section label {
+            font-size: 18px;
+            color: #333;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .contact-section input,
+        .contact-section textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .contact-section button {
+            background-color: #5c6bc0;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 18px;
+        }
+
+        .contact-section button:hover {
+            background-color: #3f51b5;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #5c6bc0;
+            color: white;
+            margin-top: auto;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="/">Головна</a>
+        <a href="/courses">Онлайн-курси</a>
+        <a href="/lectures">Лекції</a>
+        <a href="/homework">Домашні завдання</a>
+        <a href="/feedback">Відгуки студентів</a>
+    </div>
+
+    <!-- Основний контейнер -->
+    <div class="container">
+        <!-- Бокове меню -->
+        <div class="sidebar">
+            <h2>Меню</h2>
+            <ul>
+                <li>Розклад</li>
+                <li>Інформація про студентів</li>
+                <li>Інформація про викладачів</li>
+                <li>Карта тривог</li>
+                <li>Карта як добратися до головного корпусу</li>
+                <li>Факультети</li>
+            </ul>
+        </div>
+
+        <!-- Головний контент -->
+        <div class="main-content">
+            <!-- Інформація про компанію -->
+            <div class="company-info">
+                <h2>Про нас</h2>
+                <p>Наша компанія вже понад 5 років надає високоякісні онлайн-курси та навчальні матеріали студентам з усього світу. Ми віримо, що освіта повинна бути доступною для всіх, і постійно працюємо над тим, щоб наші курси відповідали найвищим стандартам.</p>
+                <p>Наш офіс знаходиться в Києві, за адресою: вулиця Івана Мазепи, 14. Ми пишаємося тим, що навчаємо студентів новітнім технологіям та знанням, які допомагають їм досягти успіху у своїй кар'єрі.</p>
+            </div>
+
+            <!-- Викладачі -->
+            <h2 style="text-align: center; color: #5c6bc0;">Наші викладачі</h2>
+            <div class="teacher-container">
+                <div class="teacher-block">
+                    <img src="{{ url_for('static', filename='images/yaroslav.jpg') }}" alt="Самар Ярослав" width="200px" height="200px">
+                    <h3>Самар Ярослав</h3>
+                    <p>Доктор технічних наук, закінчив "DAVID GOGGINS ALPHA MALE COURSE" & "TON CRYPTO how to earn 5 dollars in 90 days"</p>
+                </div>
+
+                <div class="teacher-block">
+                    <img src="{{ url_for('static', filename='images/vladislav.jpg') }}" alt="Владислав Чайка" width="200px" height="200px">
+                    <h3>Владислав Чайка</h3>
+                    <p>Доктор технічних наук, по "BINANCE SIGMA INVESTMENT" & "MISTER BEN GIRL ATACKER COURSE"</p>
+                </div>
+            </div>
+
+            <!-- Contact Us секція -->
+            <div class="contact-section">
+                <h2>Contact Us</h2>
+                <form method="POST" action="/contact" id="contactForm">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="reason">Reason for Contacting Us:</label>
+                    <textarea id="reason" name="reason" rows="4" required></textarea>
+
+                    <button type="submit">Submit</button>
+                </form>
+                <div id="responseMessage"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        &copy; 2024 Освітня платформа. Всі права захищені.
+    </footer>
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault(); // Запобігаємо стандартному відправленню форми
+
+            const email = document.getElementById('email').value;
+            const reason = document.getElementById('reason').value;
+
+            fetch('/contact', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ email, reason }),
+            })
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('responseMessage').innerText = 'Ваше повідомлення надіслано! Дякуємо!';
+                document.getElementById('contactForm').reset();
+            })
+            .catch((error) => {
+                document.getElementById('responseMessage').innerText = 'Сталася помилка. Спробуйте ще раз.';
+            });
+        });
+    </script>
+</body>
+</html>

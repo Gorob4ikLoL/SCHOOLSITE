@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Відгуки студентів</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f4f7fa;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #5c6bc0;
+            padding: 10px 20px;
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: white;
+            margin-right: 15px;
+            padding: 10px 20px;
+            border-radius: 5px;
+            background-color: #3f51b5;
+            transition: background-color 0.3s;
+        }
+
+        .navbar a:hover {
+            background-color: #303f9f;
+        }
+
+        h1 {
+            color: #5c6bc0;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .container {
+            display: flex;
+            flex: 1;
+            max-width: 1200px;
+            margin: 30px auto;
+            width: 100%;
+        }
+
+        .sidebar {
+            width: 25%;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-right: 20px;
+            align-self: flex-start;
+        }
+
+        .sidebar h2 {
+            color: #5c6bc0;
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .sidebar ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .sidebar ul li {
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+
+        .sidebar ul li:hover {
+            color: #5c6bc0;
+            cursor: pointer;
+        }
+
+        .main-content {
+            width: 75%;
+        }
+
+        .feedback-container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .feedback-block {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .feedback-block img {
+            border-radius: 50%;
+            margin-bottom: 15px;
+        }
+
+        .feedback-block h3 {
+            margin: 10px 0 5px 0;
+            color: #5c6bc0;
+        }
+
+        .feedback-block p {
+            color: #555;
+        }
+
+        .feedback-block .stars {
+            color: gold;
+            font-size: 24px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #5c6bc0;
+            color: white;
+            margin-top: auto;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <!-- Навігаційна панель -->
+    <div class="navbar">
+        <a href="/">Головна</a>
+        <a href="/courses">Онлайн-курси</a>
+        <a href="/lectures">Лекції</a>
+        <a href="/homework">Домашні завдання</a>
+        <a href="/feedback">Відгуки студентів</a>
+    </div>
+
+    <!-- Основний контейнер -->
+    <div class="container">
+        <!-- Бокове меню -->
+        <div class="sidebar">
+            <h2>Меню</h2>
+            <ul>
+                <li>Розклад</li>
+                <li>Інформація про студентів</li>
+                <li>Інформація про викладачів</li>
+                <li>Карта тривог</li>
+                <li>Карта як добратися до головного корпусу</li>
+                <li>Факультети</li>
+            </ul>
+        </div>
+
+        <!-- Основний контент -->
+        <div class="main-content">
+            <!-- Відгуки студентів -->
+            <div class="feedback-container">
+                <h2>Відгуки студентів</h2>
+
+                <div class="feedback-block">
+                    <img src="{{ url_for('static', filename='images/student1.jpg') }}" alt="Student 1" width="100px" height="100px">
+                    <h3>Валера</h3>
+                    <div class="stars">★★★★☆</div>
+                    <p>Дуже сподобалось, майже відразу після курсу влаштувався на гарну роботу, тепер маю свою кішко-дівчіну та все, що мені потрібно.</p>
+                </div>
+
+                <div class="feedback-block">
+                    <img src="{{ url_for('static', filename='images/student2.jpg') }}" alt="Student 2" width="100px" height="100px">
+                    <h3>Даня</h3>
+                    <div class="stars">★★★★★</div>
+                    <p>Відмінний курс! Дуже задоволений матеріалами та викладачами, рекомендую всім!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        &copy; 2024 Освітня платформа. Всі права захищені.
+    </footer>
+</body>
+</html>

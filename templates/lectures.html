@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лекції</title>
+
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f4f7fa;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #5c6bc0;
+            padding: 10px 20px;
+            position: relative;
+            z-index: 10;
+        }
+
+        .navbar .search {
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar input[type="text"] {
+            padding: 8px;
+            border-radius: 20px;
+            border: none;
+            margin-right: 20px;
+            width: 200px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: white;
+            margin-right: 15px;
+            padding: 10px 20px;
+            border-radius: 5px;
+            background-color: #3f51b5;
+            transition: background-color 0.3s;
+        }
+
+        .navbar a:hover {
+            background-color: #303f9f;
+        }
+
+        h1 {
+            color: #5c6bc0;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .lecture-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-top: 50px;
+        }
+
+        .lecture-item {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 20px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+
+        .lecture-item h3 {
+            margin: 0;
+            color: #5c6bc0;
+        }
+
+        .lecture-item p {
+            margin: 5px 0 0 0;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <!-- Верхня панель навігації -->
+    <div class="navbar">
+        <!-- Пошук -->
+        <div class="search">
+            <input type="text" placeholder="Пошук">
+        </div>
+
+        <!-- Кнопки навігації -->
+        <div>
+            <a href="/">Головна</a>
+            <a href="/courses">Онлайн-курси</a>
+            <a href="/lectures">Лекції</a>
+            <a href="/homework">Домашні завдання</a>
+            <a href="#">Відгуки студентів</a>
+        </div>
+    </div>
+
+    <h1>Наші лекції</h1>
+
+    <div class="lecture-container">
+        <div class="lecture-item">
+            <h3>Лекція 1: Основи програмування</h3>
+            <p>Викладач: Самар Ярослав</p>
+            <p>Опис: Вступ до програмування на Python, основи синтаксису та структур даних.</p>
+        </div>
+        <div class="lecture-item">
+            <h3>Лекція 2: Веб-розробка з Flask</h3>
+            <p>Викладач: Владислав Чайка</p>
+            <p>Опис: Основи веб-розробки, створення простого веб-додатку з використанням Flask.</p>
+        </div>
+        <div class="lecture-item">
+            <h3>Лекція 3: Алгоритми та структури даних</h3>
+            <p>Викладач: Самар Ярослав</p>
+            <p>Опис: Основні алгоритми та структури даних, їх реалізація на Python.</p>
+        </div>
+    </div>
+</body>
+</html>
